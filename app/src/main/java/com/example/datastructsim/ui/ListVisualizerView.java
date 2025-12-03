@@ -1,4 +1,4 @@
-package com.example.datastructsim.domain;
+package com.example.datastructsim.ui;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -7,13 +7,11 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.example.datastructsim.domain.model.Node;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class ListVisualizerView extends View {
-    private List<Node> elements = new ArrayList<>();
+    private List<Integer> elements = new ArrayList<>();
     private Paint boxPaint;
     private Paint textPaint;
 
@@ -33,10 +31,7 @@ public class ListVisualizerView extends View {
     }
 
     public void setElements(List<Integer> newElements){
-        elements.clear();
-        for(int i : newElements){
-            elements.add(new  Node(i));
-        }
+        elements = new ArrayList<>(newElements);
         invalidate();
     }
 
@@ -60,7 +55,7 @@ public class ListVisualizerView extends View {
             float bottom = height / 2f + 100;
 
             canvas.drawRect(left, top, right, bottom, boxPaint);
-            canvas.drawText(String.valueOf(elements.get(i).getValue()),
+            canvas.drawText(String.valueOf(elements.get(i)),
                     left+boxWidth / 2f - 5, height / 2f + 15, textPaint);
         }
 

@@ -11,7 +11,6 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.datastructsim.domain.ListVisualizerView;
 import com.example.datastructsim.R;
 
 import java.util.ArrayList;

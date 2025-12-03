@@ -38,7 +38,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
-        <com.example.datastructsim.domain.ListVisualizerView
+        <com.example.datastructsim.ui.ListVisualizerView
             android:id="@+id/listVisualizer"
             android:layout_width="match_parent"
             android:layout_height="300dp"
