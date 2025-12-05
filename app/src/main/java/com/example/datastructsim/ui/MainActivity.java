@@ -63,7 +63,10 @@ public class MainActivity extends AppCompatActivity {
         adapter.setOnItemClickListener(new Adapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-
+                Item item = list.get(position);
+                Intent intent = new Intent(MainActivity.this, ProgActivity.class);
+                intent.putExtra("id", item.getId());
+                startActivity(intent);
             }
 
             @Override

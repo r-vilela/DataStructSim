@@ -26,41 +26,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="409dp"
-        android:layout_height="622dp"
-        android:layout_marginStart="1dp"
+    <com.example.datastructsim.ui.ListVisualizerView
+        android:id="@+id/listVisualizer"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
         android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        android:background="#ECECEC"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp" />
 
-        <com.example.datastructsim.ui.ListVisualizerView
-            android:id="@+id/listVisualizer"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:background="#ECECEC"
-            tools:ignore="MissingConstraints" />
+    <EditText
+        android:id="@+id/inputValue"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="15dp"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:maxLines="15"
+        android:minLines="4"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btnInsert"
+        app:layout_constraintTop_toBottomOf="@+id/listVisualizer"
+        tools:layout_editor_absoluteX="62dp" />
 
-        <EditText
-            android:id="@+id/inputValue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:fontFamily="@font/aldrich"
-            android:hint="Enter a Value"
-            android:inputType="number" />
+    <Button
+        android:id="@+id/btnInsert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E98644"
+        android:fontFamily="@font/aldrich"
+        android:text="Insert"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="1dp" />
 
-        <Button
-            android:id="@+id/btnInsert"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#E98644"
-            android:fontFamily="@font/aldrich"
-            android:text="Insert"
-            android:textStyle="bold" />
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
