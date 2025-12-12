@@ -3,6 +3,7 @@ package com.example.datastructsim.domain.model;
 public class Node {
     int value;
     Node next;
+    private int selected;
 
     public Node(int value){
         this.value = value;
@@ -14,7 +15,13 @@ public class Node {
     }
     
     public int getValue(){return this.value;}
-    public Node getNext(){return this.next;}
+    public Node getNext(){
+        if(this.selected == 0)
+            return null;
+        this.selected--;
+        return this.next;
+    }
+    public int getSelected(){return this.selected;}
 
     public void setValue(int value){
         this.value = value;
@@ -22,5 +29,8 @@ public class Node {
     public void setNext(Node next){
         this.next = next;
     }
+    public void toggleSelected(){this.selected++;}
+
+
 
 }

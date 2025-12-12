@@ -8,7 +8,7 @@
     tools:context=".ui.MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/titleTxt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="#241D1D"
@@ -41,7 +41,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/titleTxt" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

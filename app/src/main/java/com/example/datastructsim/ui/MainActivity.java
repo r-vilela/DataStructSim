@@ -23,7 +23,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ListVisualizerView visualizer;
+    private Renderer visualizer;
     private EditText inputValue;
     private List<Integer> listData = new ArrayList<>();
     private Button btnAdd;
@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(int position) {
                 Item item = list.get(position);
                 Intent intent = new Intent(MainActivity.this, ProgActivity.class);
+                intent.putExtra("titulo", item.getTitulo());
                 intent.putExtra("id", item.getId());
                 startActivity(intent);
             }
